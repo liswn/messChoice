@@ -1,0 +1,76 @@
+.defaultHeader,
+.changeHeader
+{
+  position: fixed;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #fff;
+  box-shadow: 0 2px 3px 0 rgba(0,0,0,.2)
+}
+.defaultHeader
+{
+  height: 80px;
+}
+.logo
+{
+  position: absolute;
+  display: block;
+  top: 50%;
+}
+.defaultHeader .logo
+{
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  height: 45px;
+}
+
+.changeHeader
+{
+  height: 60px;
+}
+.changeHeader .main
+{
+  width: 1200px;
+  margin: 0 auto;
+}
+.changeHeader .logo
+{
+  height: 45px;
+  transform: translateY(-50%);
+}
+.changeHeader .nav
+{
+  margin-left: 205px;
+  margin-top: 20px;
+  height: 25px;
+}
+.nav-li
+{
+  float: left;
+}
+.changeHeader .nav-a
+{
+  position: relative;
+  z-index: 2;
+  display: block;
+  padding-bottom: 6px;
+  color: #000;
+  font-size: 14px;
+  font-weight: 700;
+  padding: 0 25px;
+}
+
+.changeHeader .nav-a:hover
+{
+  color: @themeBg
+}
+
+.scroll-enter-active{
+  transition: top .5s
+}
+.scroll-enter /* .fade-leave-active 在低于版本 2.1.8 中 */ {
+  top: -100px
+}

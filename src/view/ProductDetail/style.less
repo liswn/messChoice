@@ -1,0 +1,120 @@
+.container
+{
+  width: 1200px;
+  margin: 0 auto;
+}
+.crumbs-container
+{
+  margin: 30px 0 10px;
+  font-size: 12px;
+  color: #999999;
+  line-height: 20px;
+}
+.crumbs-container a
+{
+  font-size: 12px;
+  color: #666;
+}
+.detail_container
+{
+  height: 500px;
+  background-color: #fff;
+}
+.previewImg-box
+{
+  position: relative;
+  width: 600px;
+  height: 500px;
+  float: left;
+}
+.thumbnail-box
+{
+  float: right;
+  width: 100px;
+  height: 500px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+.thumbnail-items
+{
+  width: 100px;
+  height: 100px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  background-color: #f4f4f4;
+  border: 2px solid #f4f4f4;
+  transition: border-color .3s linear;
+}
+.thumbnail-small
+{
+  position: relative;
+  width: 100px;
+  height: 100px;
+  overflow: hidden;
+}
+.thumbnail-small img
+{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+.thumbnail-items:hover,
+.thumbnail-items.active
+{
+  border-color: @themeBg;
+  cursor: pointer;
+}
+.previewImg-container
+{
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 500px;
+  height: 500px;
+}
+
+.product-intro_container
+{
+  float: left;
+  margin-left: 50px;
+  width: 500px;
+  padding-top: 30px;
+}
+.name{
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 30px;
+  text-align: justify;
+}
+.desc
+{
+  color: #999999;
+  font-size: 12px;
+  margin-top: 15px;
+  text-align: justify;
+  line-height: 20px;
+}
+
+.fade-enter-active, .fade-leave-active {
+  transition: opacity 1s
+}
+.fade-enter, .fade-leave-to /* .fade-leave-active 在低于版本 2.1.8 中 */ {
+  opacity: 0
+}
+.product-info
+{
+  margin-top: 50px;
+  border-top: 1px solid #ddd;
+}
+.info-items
+{
+  font-size: 14px;
+  color: #999999;
+  margin-top: 20px;
+  line-height: 20px;
+  text-align: justify;
+}
