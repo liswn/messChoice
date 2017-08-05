@@ -21,8 +21,6 @@ export default new Router({
       component: ProductDetail
     }
   ],
-  mode: 'history',
-  saveScrollPosition: true,
   scrollBehavior (to, from, savedPosition) {
     if (savedPosition) {
       return savedPosition
