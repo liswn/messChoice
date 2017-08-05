@@ -1,7 +1,8 @@
 .container
 {
   position: relative;
-  flex: 0 0 25%;
+  flex: 0 0 300px;
+  width: 300px;
   height: 400px;
   box-sizing: border-box;
   padding: 15px;
@@ -32,11 +33,15 @@
 {
   display: block;
   height: 30px;
+  width: 100%;
   line-height: 30px;
   text-align: center;
   color: #333333;
   font-size: 18px;
   margin-top: 10px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 .title-a:hover{
   color: @themeBg;
@@ -52,4 +57,7 @@
   line-height: 40px;
   margin: 10px 40px 0;
   border-top: 1px solid #ddd;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }

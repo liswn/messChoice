@@ -3,28 +3,31 @@
       <div class="banner_container">
       </div>
       <div class="warp_container">
-        <h1 class="type-name">凉被</h1>
-        <div class="product_container">
-          <product-box v-for="(items,index) in products"
-            :id="index"
-            :cover="items.cover"
-            :title="items.name"
-            :desc="items.desc"
-          ></product-box>
+        <div v-for="(type, typeIndex) in types">
+          <h1 class="type-name">{{type.name}}</h1>
+          <div class="product_container">
+            <product-box v-for="(items,productIndex) in type.list"
+                         :id="productIndex"
+                         :type="typeIndex"
+                         :cover="items.cover"
+                         :title="items.name"
+                         :desc="items.desc"
+            ></product-box>
+          </div>
         </div>
       </div>
     </div>
 </template>
 <script>
   import ProductBox from '../../components/ProductBox/index.vue'
-  import products from '../../data/product'
+  import types from '../../data/types'
   export default {
     components: {
       ProductBox
     },
     data () {
       return {
-        products: products
+        types: types
       }
     }
   }

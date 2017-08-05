@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import HomePage from '../view/Homepage/page.vue'
+import ProductList from '../view/ProductList/page.vue'
 import ProductDetail from '../view/ProductDetail/page.vue'
 
 Vue.use(Router)
@@ -12,12 +13,21 @@ export default new Router({
       component: HomePage
     },
     {
-      path: '/product/:id',
+      path: '/list/:type',
+      component: ProductList
+    },
+    {
+      path: '/product/:type/:id',
       component: ProductDetail
     }
   ],
+  mode: 'history',
+  saveScrollPosition: true,
   scrollBehavior (to, from, savedPosition) {
-    console.log(1)
-    return { x: 0, y: 0 }
+    if (savedPosition) {
+      return savedPosition
+    } else {
+      return { x: 0, y: 0 }
+    }
   }
 })

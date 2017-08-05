@@ -3,6 +3,8 @@
       <div class="crumbs-container">
           <router-link to="/">首页</router-link>
         &gt;
+        {{type.name}}
+        &gt;
         {{product.name}}
       </div>
       <div class="detail_container">
@@ -36,7 +38,7 @@
     </div>
 </template>
 <script>
-  import products from '../../data/product'
+  import productsTypes from '../../data/types'
   export default {
     data () {
       return {
@@ -44,8 +46,11 @@
       }
     },
     computed: {
+      type () {
+        return productsTypes[this.$route.params.type]
+      },
       product () {
-        return products[this.$route.params.id]
+        return this.type['list'][this.$route.params.id]
       }
     },
     methods: {

@@ -19,6 +19,11 @@
                   首页
                 </router-link>
               </li>
+              <li class="nav-li" v-for="(item, index) in types"  >
+                <router-link :to="'/list/'+index" class="nav-a">
+                  {{item.name}}
+                </router-link>
+              </li>
             </ul>
           </div>
         </div>
@@ -29,10 +34,12 @@
     </div>
 </template>
 <script>
+  import types from '../../data/types'
   export default {
     data () {
       return {
-        scrollHeader: false
+        scrollHeader: false,
+        types: types
       }
     },
     methods: {

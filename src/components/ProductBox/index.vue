@@ -1,12 +1,12 @@
 <template>
     <div class="container">
-    <router-link :to="'/product/'+id" class="img-a">
+    <router-link :to="'/product/'+type+'/'+id" class="img-a">
       <img class="lazy-loaded product-img" v-lazy-load='cover' alt="">
       </router-link>
-      <router-link :to="'/product/'+id" class="title-a">
+      <router-link :to="'/product/'+type+'/'+id" class="title-a" :title="title">
         {{title}}
       </router-link>
-      <p class="desc-p">
+      <p class="desc-p" :title="desc">
         {{desc}}
       </p>
     </div>
@@ -15,8 +15,10 @@
   export default {
     props: {
       id: {
-        type: String,
-        default: ''
+        default: 0
+      },
+      type: {
+        default: 0
       },
       cover: {
         type: String,
