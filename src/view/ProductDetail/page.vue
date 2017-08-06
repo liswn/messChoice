@@ -3,7 +3,7 @@
       <div class="crumbs-container">
           <router-link to="/">首页</router-link>
         &gt;
-        {{type.name}}
+        <router-link :to="'/list/'+$route.params.type">{{type.name}}</router-link>
         &gt;
         {{product.name}}
       </div>
