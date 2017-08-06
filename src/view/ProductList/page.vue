@@ -26,13 +26,11 @@
       ProductBox
     },
     computed: {
+      type () {
+        return types[this.$route.params.type]
+      },
       typeIndex () {
         return this.$route.params.type
-      }
-    },
-    data () {
-      return {
-        type: types[this.$route.params.type]
       }
     }
   }

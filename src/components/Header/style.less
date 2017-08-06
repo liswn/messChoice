@@ -11,6 +11,11 @@
 }
 .defaultHeader
 {
+  height: 120px;
+}
+.logo-box
+{
+  position: relative;
   height: 80px;
 }
 .logo
@@ -26,12 +31,16 @@
   transform: translate(-50%,-50%);
   height: 45px;
 }
+.defaultHeader nav
+{
+  height: 25px;
+}
 
 .changeHeader
 {
   height: 60px;
 }
-.changeHeader .main
+.main
 {
   width: 1200px;
   margin: 0 auto;
@@ -51,7 +60,7 @@
 {
   float: left;
 }
-.changeHeader .nav-a
+.nav-a
 {
   position: relative;
   z-index: 2;
@@ -63,14 +72,19 @@
   padding: 0 25px;
 }
 
-.changeHeader .nav-a:hover
+.router-link-exact-active,
+.nav-a:hover
 {
   color: @themeBg
 }
 
-.scroll-enter-active{
-  transition: top .5s
+.scrollDefault-enter-active,.scrollChange-enter-active{
+  transition: height .3s;
 }
-.scroll-enter /* .fade-leave-active 在低于版本 2.1.8 中 */ {
-  top: -100px
+.scrollDefault-enter /* .fade-leave-active 在低于版本 2.1.8 中 */ {
+  height: 80px;
+}
+.scrollChange-enter
+{
+  height: 120px;
 }
